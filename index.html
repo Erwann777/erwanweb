@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-300">
+<div class="bg-white h-12 w-screen flex items-center justify-between px-4 fixed">
+  <img src="raffles.jpg" class="w-28 h-10">
+    <div class="flex-1  text-center font-serif text-xs sm:text-lg md:text-xl lg:text-2xl"> </div>
+  <a href="login.html">
+  <div class="text-right flex gap-2 font-serif bg-blue-200 p-1 mr-2 rounded-xl transform hover:bg-blue-100 transition duration-300 hover:scale-105 "><img src="log-in.svg">Sign In</div>
+  </a>
+</div>
+
+<div class="h-screen flex items-center justify-center">
+  <div class="bg-slate-400 text-black h-auto w-96 rounded">
+    <p class="text-2xl font-sans font-bold text-center mt-6">STUDENT REGISTER</p>
+    <div class="mt-4 flex-col">
+      <p class="ml-5 font-serif text-slate-100">Student Name</p>  
+      <input type="text" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4">
+      <div class="flex gap-1">
+      <p class="ml-5 font-serif text-slate-100">Student ID</p>
+      <p class="text-red-600">*</p> 
+      </div> 
+      <input type="text" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4 ">
+      <!--STUDY MAJOR START-->
+<div class="relative ml-4  w-72">
+  <p class="ml-1 mb-1 font-serif text-slate-100">Study Major</p>
+  <div class="relative">
+    <input
+      id="studyInput"
+      type="text"
+      placeholder=""
+      
+      class="bg-white text-black rounded-lg border-none w-full pl-2 pr-10 cursor-pointer"
+    />
+    <!--Ikon panah & silang -->
+    <img
+      src="down.svg"
+      id="dropdownIcon"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 cursor-pointer z-10"
+      alt="dropdown icon"
+    />
+  </div>
+
+  <!--DROPDOWN MENU -->
+  <div id="dropdownMenu"
+       class="absolute mt-2 w-full max-h-48 overflow-y-auto bg-white text-black rounded-lg shadow-lg hidden z-20">
+    <ul class="divide-y divide-gray-200">
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Computer Science</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Robotics</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Artificial Intelligence</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Data Science</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Software Engineering</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Cybersecurity</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Machine Learning</li>
+      <li class="p-2 hover:bg-gray-100 cursor-pointer">Information Systems</li>
+    </ul>
+  </div>
+</div>
+
+<!--SCRIPT -->
+<script>
+  const dropdownBtn = document.getElementById('dropdownIcon');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const studyInput = document.getElementById('studyInput');
+  const menuItems = dropdownMenu.querySelectorAll('li');
+
+  let isOpen = false;
+
+  // Toggle dropdown & icon
+  dropdownBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    dropdownMenu.classList.toggle('hidden');
+    dropdownBtn.src = isOpen ? 'close.svg' : 'down.svg';
+  });
+
+  // Select menu item and set input value
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      studyInput.value = item.textContent;
+      dropdownMenu.classList.add('hidden');
+      dropdownBtn.src = 'down.svg';
+      isOpen = false;
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdownMenu.contains(e.target) &&
+        !dropdownBtn.contains(e.target) &&
+        !studyInput.contains(e.target)) {
+      dropdownMenu.classList.add('hidden');
+      dropdownBtn.src = 'down.svg';
+      isOpen = false;
+    }
+  });
+</script>
+
+      <p class="ml-5 font-serif text-slate-100">Nationality</p>  
+      <input type="text" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4">
+        <p class="ml-5 font-serif text-slate-100">Date Of Enrolment</p>
+        <input type="date" class="bg-white rounded-lg border-none pl-1 ml-4 ">
+       <div>
+        <p class="ml-5 font-serif text-slate-100">Address</p>  
+        <input type="text" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4">
+       </div>
+       <div class="flex gap-1">
+       <p class="ml-5 font-serif text-slate-100">Phone Number</p> 
+       <p class="text-red-600">*</p>
+       </div>
+       <input type="text" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4">
+       <div class="flex gap-1">
+       <p class="ml-5 font-serif text-slate-100">Email Address</p>
+       <p class="text-red-600">*</p>
+       </div>
+       <input type="email" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4">
+       <div class="flex gap-1">
+        <p class="ml-5 font-serif text-slate-100">Password </p>
+        <p class="text-red-600">*</p>
+       </div> 
+        <input type="text" placeholder="" class="bg-white rounded-lg border-none w-72 pl-2 ml-4">
+       <div class="justify-center flex mt-10 mb-4">
+        <a href="homepage.html">
+            <button class="bg-blue-500 w-52 text-center p-1 hover:bg-blue-400 rounded-2xl text-white transform hover:scale-110 transition duration-300">Submit</button>
+        </a>
+        </div>
+    </div>
+  </div>
+</div>
+<footer class="bg-slate-800 h-auto pl-4 pr-4 pt-2">
+    <p class="text-white font-light text-xs sm:text-base md:text-lg lg:text-lg text-justify">Raffles University, located in Medini, Iskandar Puteri, Johor, Malaysia, has made significant positive impacts across various sectors through its commitment to sustainability, community engagement, and interdisciplinary education.</p>
+    <p class="text-white flex gap-2 font-light mt-4 cursor-pointer"><img src="about.svg">About Us</p>
+    <p class="text-white font-semibold mt-5 mb-1">Contact Us On</p>
+    <div class="flex gap-4 ">
+    <div class="space-y-2">
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="instagram.svg">erwann_7</p>
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="facebook.svg">Raffles University</p>
+    </div>
+    <div class="space-y-2">
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="mail.svg"> enquiry@raffles-university.edu.my</p>
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="phone.svg">+607-5352515</p>
+    </div>
+    </div>
+    <p class="text-white font-semibold mt-2">Operation Time</p>
+<p class="text-white font-thin flex gap-2 mt-1"><img src="clock.svg">08.30 AM - 17.30 PM</p>
+    <p class="text-white font-semibold">Location</p>
+    <p class="text-white font-thin mt-1 flex gap-2 cursor-pointer text-xs sm:text-base md:text-lg lg:text-lg text-justify"><img src="location.svg">Jalan Medini Sentral 5
+Bandar Medini Iskandar Malaysia
+79250 Iskandar Puteri, Johor, Malaysia </p>
+
+</footer>
+
+</body>
+</html>

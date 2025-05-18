@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-white h-12 w-screen flex items-center justify-between px-4">
+  <img src="raffles.jpg" class="w-28 h-10">
+    <div class="flex-1  text-center font-serif text-xs sm:text-lg md:text-xl lg:text-2xl"></div>
+  <div class="flex gap-1">
+    <a href="#">
+    <img src="albert.jpg" class="h-10 w-10 rounded-full">
+  </a>
+  <p class="font-serif mt-3">Erwan</p>
+  </div>
+</div>
+    <div class="bg-slate-300 min-w-full min-h-screen flex justify-center items-center ">
+      <!--login container-->
+      <div
+        class="bg-slate-400 rounded-2xl shadow-lg max-w-3xl p-5 "
+      >
+        <!--form-->
+        <div class="sm:w-full px-16">
+          <h2 class="font-extrabold text-2xl text-center font-serif">Login</h2>
+          <p class="text-sm mt-4 text-nowrap text-center lg:-mx-4 md:text-center sm:text-center">
+            If you already have an account. Easily log in
+          </p>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="rounded-md p-2 mt-4 w-full"
+          />
+          <div class="relative">
+            <input
+              id="js-pass"
+              class="rounded-md p-2 mt-4 w-full"
+              type="password"
+              placeholder="Password"
+            />
+            <button class="absolute right-2 top-7" onclick="passToggle()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="gray"
+                class="size-5"
+                id="js-eye"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <a href="#">
+            <p class="text-gray-100 relative text-end">
+            Forgot password?
+            </p>
+          </a>
+          <a href="homepage.html">
+          <div class="flex items-center justify-center ">
+            <button
+              class="bg-slate-300 w-52 rounded-2xl py-2 mt-2 transition transform hover:scale-110 hover:bg-blue-500 duration-300"
+            >
+              Log In
+            </button>
+          </div>
+         </a>
+         
+          <script>
+            const passInput = document.getElementById("js-pass");
+            const eyeSVG = document.getElementById("js-eye");
+            function passToggle() {
+              if (passInput.type === "password") {
+                passInput.type = "text";
+                eyeSVG.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />`;
+              } else {
+                passInput.type = "password";
+                eyeSVG.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-5" id="js-eye">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>`;
+              }
+            }
+          </script>
+
+          <div class="mt-4 grid grid-cols-3 items-center text-gray-500">
+            <hr class="border-gray-500" />
+            <p class="text-center text-sm">OR</p>
+            <hr class="border-gray-500" />
+          </div>
+          <p class="font-serif font-semibold text-center mt-4">Continue With</p>
+          <a href="#">
+            <div
+              class="bg-white text-center py-2 border-1 rounded-2xl font-bold mt-6"
+            >
+              <img
+                class="w-6 h-6 absolute mx-3 items-center sm:-my-1.25 md:-my-1.25 lg:-my-1.25"
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                loading="lazy"
+                alt="google logo"
+              />
+              Google
+            </div>
+          </a>
+          <a href="#">
+            <div
+              class="bg-white text-center py-2 border-1 rounded-2xl font-bold mt-6"
+            >
+              <svg
+                class="h-6 w-6 mr-2 absolute mx-3 items-center sm:my-1.25 md:-my-1.25 lg:-my-1.25"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 48 48"
+                version="1.1"
+              >
+                <g
+                  id="Icons"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Color-"
+                    transform="translate(-200.000000, -160.000000)"
+                    fill="#4460A0"
+                  >
+                    <path
+                      d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z"
+                      id="Facebook"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              Facebook
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+<footer class="bg-slate-800 h-auto pl-4 pr-4 pt-2">
+    <p class="text-white font-light text-xs sm:text-base md:text-lg lg:text-lg text-justify">Raffles University, located in Medini, Iskandar Puteri, Johor, Malaysia, has made significant positive impacts across various sectors through its commitment to sustainability, community engagement, and interdisciplinary education.</p>
+    <p class="text-white flex gap-2 font-light mt-4 cursor-pointer"><img src="about.svg">About Us</p>
+    <p class="text-white font-semibold mt-5 mb-1">Contact Us On</p>
+    <div class="flex-row flex gap-4">
+    <div class="space-y-2">
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="instagram.svg">erwann_7</p>
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="facebook.svg">Raffles University</p>
+    </div>
+    <div class="space-y-2">
+    <p class="text-white font-thin flex gap-2 cursor-pointer "><img src="mail.svg"> enquiry@raffles-university.edu.my</p>
+    <p class="text-white font-thin flex gap-2 cursor-pointer"><img src="phone.svg">+607-5352515</p>
+    </div>
+    </div>
+    <p class="text-white font-semibold mt-2">Operation Time</p>
+<p class="text-white font-thin flex gap-2 mt-1"><img src="clock.svg">08.30 AM - 17.30 PM</p>
+    <p class="text-white font-semibold">Location</p>
+    <p class="text-white font-thin mt-1 flex gap-2 cursor-pointer text-xs sm:text-base md:text-lg lg:text-lg text-justify"><img src="location.svg">Jalan Medini Sentral 5
+Bandar Medini Iskandar Malaysia
+79250 Iskandar Puteri, Johor, Malaysia </p>
+
+</footer>
+  </body>
+</html>
