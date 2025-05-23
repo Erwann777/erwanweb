@@ -6,22 +6,297 @@
   <title>Document</title>
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gradient-to-t from-orange-400 to-slate-400 h-screen">
-  <div class="bg-white h-16 w-screen flex items-center justify-between px-4 fixed">
-  <img src="raffles.jpg" class="w-28 h-10">
-    <div class="flex-1  text-center font-serif text-xs sm:text-lg md:text-xl lg:text-2xl">WELCOME</div>
-  <div class="flex gap-1">
-  <a href="#">
-    <img src="albert.jpg" class="h-10 w-10 rounded-full">
-  </a>
-  <p class="font-serif mt-3">Erwan</p>
+<body class="bg-slate-300 h-screen">
+  <!-- Navbar -->
+  <div class="bg-white h-14 w-screen  flex items-center px-4 gap-2 md:gap-4 sm:gap-2 lg:gap-12">
+    <div>
+    <img src="raffles.jpg" class="w-28 h-10" />
+    </div>
+    <!-- Desktop Menu -->
+    <div>
+    <div class="flex items-center justify-center">
+    <nav class="hidden sm:flex md:gap-3 lg:gap-8 sm:text-sm md:text-base lg:text-base lg:justify-center lg:items-center lg:flex">
+      <ul class="flex  py-2 font-serif hover:text-gray-500 ">
+        <li class=" flex sm:hidden md:flex lg:flex"><a href="#">HOME</a></li>    
+      </ul>
+    <!--Programme start-->
+      <div class="relative">
+    <button id="dropdownButton" class="flex items-center gap-2 px-4 py-2 text-black transition font-serif hover:text-gray-500">
+      PROGRAMME
+      <img id="arrowIcon" src="down2.svg" class="w-4 h-4" alt="arrow">
+    </button>
+
+    <!-- Dropdown Menu -->
+    <ul id="dropdownMenu" class="absolute mt-2 w-40 bg-white shadow-md rounded-md hidden z-50 ">
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Faculty of AI & Robotics</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Faculty of Arts & Design
+
+</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Faculty of Business</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Faculty of Built Environment & Regenerative Design
+
+</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Faculty of Social Sciences</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Centre for Foundation Studies & Language</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Centre for Postgraduate Studies</a></li>
+    </ul>
   </div>
+  <!--Programme end-->
+  <!--Fees start-->
+  <div class="relative">
+    <button id="dropdownbutton" class="flex items-center gap-2 px-4 py-2 text-black transition font-serif hover:text-gray-500">
+      FEES
+      <img id="arrowicon" src="down2.svg" class="w-4 h-4" alt="panah">
+    </button>
+
+    <!-- Dropdown Menu -->
+    <ul id="dropdownmenu" class="absolute mt-2 w-40 bg-white shadow-md rounded-md hidden z-50 ">
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Malaysian Student</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">International Student</a></li>
+      
+    </ul>
+  </div>
+  <!--Fees end-->
+<!--About us start-->
+  <div class="relative ">
+    <button id="DropdownButton" class="flex items-center gap-2 px-4 py-2 text-black transition font-serif hover:text-gray-500">
+      ABOUT US
+      <img id="ArrowIcon" src="down2.svg" class="w-4 h-4" alt="arrow">
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div class="relative">
+    <ul id="DropdownMenu" class="absolute top-full mt-2 w-40 bg-white shadow-md rounded-md hidden z-50">
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">About Raffles University</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">About Campus</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Why Raffles?</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">Location</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:outline-1">QS Ranking</a></li>
+    </ul>
+  </div>
+  <!--About us end-->  
+  <ul class="flex gap-7 md:gap-14 lg:gap-24 py-2 font-serif hover:text-gray-500 ">
+     <li><a href="#">APPLY NOW</a></li>
+  </ul>  
+</nav>
+    </div>
+    </div>
+
+    <!-- Hamburger (Mobile)-->
+    <div class="absolute right-2 flex gap-2">
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-9 ">
+  <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+</svg>
+     <img src="menu.svg" id="menu-toggle" class="size-8"> 
+    
 </div>
-<div class=" h-screen flex items-center justify-center flex-col">
-  <p class="text-xl font-serif">NGERI WAK ANAK<span class="flex flex-col">PERHOTELAN UPH</span> </p>
-  <div class="mt-10">
-  <img class="w-50 h-50 flex flex-col items-center justify-center  " src="she.jpg">
-</div>
-</div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <ul id="mobile-menu" id="menu-toggle" class="hidden flex-col gap-4  sm:hidden bg-white top-16 w-full text-center space-y-6 z-40">
+    <li class="hover:bg-gray-100 pt-2 pb-2 w-screen "><a href="#">HOME</a></li>
+    <li class="hover:bg-gray-100 pt-2 pb-2 w-screen"><a href="#">PROGRAMME</a></li>
+    <li class="hover:bg-gray-100 pt-2 pb-2 w-screen"><a href="#">FEES</a></li>
+    <li class="hover:bg-gray-100 pt-2 pb-2 w-screen"><a href="#">ABOUT US</a></li>
+    <li class="hover:bg-gray-100 pt-2 pb-2 w-screen"><a href="#">APPLY NOW</a></li>
+  </ul>
+  
+  
+
+
+  <!-- Script -->
+  <script>
+    //programme start
+   const button = document.getElementById('dropdownButton');
+    const bar = document.getElementById('dropdownMenu');
+    const arrow = document.getElementById('arrowIcon');
+
+    let Open = false;
+
+    button.addEventListener('click', () => {
+      Open = !Open;
+      bar.classList.toggle('hidden');
+      arrow.src = Open ? "up2.svg" : "down2.svg";
+    });
+
+    // Tutup menu jika klik di luar
+    document.addEventListener('click', (e) => {
+      if (!button.contains(e.target) && !bar.contains(e.target)) {
+        bar.classList.add('hidden');
+        arrow.src = "down2.svg";
+        Open = false;
+      }
+    });
+    //programme end
+    //fees start
+    const buttonn = document.getElementById('dropdownbutton');
+    const menuu = document.getElementById('dropdownmenu');
+    const arroww = document.getElementById('arrowicon');
+
+    let isOpenn = false;
+
+    buttonn.addEventListener('click', () => {
+      isOpenn = !isOpenn;
+      menuu.classList.toggle('hidden');
+      arroww.src = isOpenn ? "up2.svg" : "down2.svg";
+    });
+
+    // Tutup menu jika klik di luar
+    document.addEventListener('click', (e) => {
+      if (!buttonn.contains(e.target) && !menuu.contains(e.target)) {
+        menuu.classList.add('hidden');
+        arroww.src = "down2.svg";
+        isOpenn = false;
+      }
+    });
+    //fees end
+    //about us start
+    const buttona = document.getElementById('DropdownButton');
+    const menua = document.getElementById('DropdownMenu');
+    const arrowa = document.getElementById('ArrowIcon');
+
+    let isOpena = false;
+
+    buttona.addEventListener('click', () => {
+      isOpena = !isOpena;
+      menua.classList.toggle('hidden');
+      arrowa.src = isOpena ? "up2.svg" : "down2.svg";
+    });
+
+    // Tutup menu jika klik di luar
+    document.addEventListener('click', (e) => {
+      if (!buttona.contains(e.target) && !menua.contains(e.target)) {
+        menua.classList.add('hidden');
+        arrowa.src = "down2.svg";
+        isOpena = false;
+      }
+    });
+    //about end
+  
+  // PROGRAMME
+  const programmeBtn = document.getElementById('dropdownButton');
+  const programmeMenu = document.getElementById('dropdownMenu');
+  const programmeArrow = document.getElementById('arrowIcon');
+
+  // FEES
+  const feesBtn = document.getElementById('dropdownbutton');
+  const feesMenu = document.getElementById('dropdownmenu');
+  const feesArrow = document.getElementById('arrowicon');
+
+  // ABOUT US
+  const aboutBtn = document.getElementById('DropdownButton');
+  const aboutMenu = document.getElementById('DropdownMenu');
+  const aboutArrow = document.getElementById('ArrowIcon');
+
+  // MOBILE MENU
+  const mobileToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let state = {
+    programme: false,
+    fees: false,
+    about: false,
+    mobile: false
+  };
+
+  // Toggle Functions
+  programmeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    state.programme = !state.programme;
+    programmeMenu.classList.toggle('hidden', !state.programme);
+    programmeArrow.src = state.programme ? 'up2.svg' : 'down2.svg';
+  });
+
+  feesBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    state.fees = !state.fees;
+    feesMenu.classList.toggle('hidden', !state.fees);
+    feesArrow.src = state.fees ? 'up2.svg' : 'down2.svg';
+  });
+
+  aboutBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    state.about = !state.about;
+    aboutMenu.classList.toggle('hidden', !state.about);
+    aboutArrow.src = state.about ? 'up2.svg' : 'down2.svg';
+  });
+
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    state.mobile = !state.mobile;
+    mobileMenu.classList.toggle('hidden', !state.mobile);
+    mobileToggle.src = state.mobile ? 'x.svg' : 'menu.svg';
+  });
+
+  // Close All Menus if clicked outside
+  document.addEventListener('click', (e) => {
+    if (!programmeBtn.contains(e.target) && !programmeMenu.contains(e.target)) {
+      programmeMenu.classList.add('hidden');
+      programmeArrow.src = 'down2.svg';
+      state.programme = false;
+    }
+    if (!feesBtn.contains(e.target) && !feesMenu.contains(e.target)) {
+      feesMenu.classList.add('hidden');
+      feesArrow.src = 'down2.svg';
+      state.fees = false;
+    }
+    if (!aboutBtn.contains(e.target) && !aboutMenu.contains(e.target)) {
+      aboutMenu.classList.add('hidden');
+      aboutArrow.src = 'down2.svg';
+      state.about = false;
+    }
+    if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+      mobileToggle.src = 'menu.svg';
+      state.mobile = false;
+    }
+  });
+  </script>
+
+  <!-- Konten -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById('searchInput');
+      const items = document.querySelectorAll('.item');
+
+      searchInput.addEventListener('input', function () {
+        const keyword = this.value.toLowerCase();
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(keyword) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-white flex flex-col">
+  <!-- Search & Content Wrapper -->
+  <div class="flex-grow flex flex-col items-center justify-center gap-3 mt-3">
+
+    <!-- Search Bar -->
+    <div class="relative w-3/4 sm:w-1/2">
+      <img src="search.svg" class="absolute left-3 top-2.5 w-5 h-5 opacity-50">
+      <input type="text" id="searchInput" placeholder="Search..." 
+             class=" px-10 py-2 w-full rounded-full bg-white outline-none ">
+    </div>
+
+    <!-- Konten yang akan dicari -->
+    <div class="space-y-2 max-w-md w-full">
+      <div class="item p-2 bg-gray-100 rounded">Artikel Tailwind CSS</div>
+      <div class="item p-2 bg-gray-100 rounded">Tutorial JavaScript</div>
+      <div class="item p-2 bg-gray-100 rounded">Panduan Belajar HTML</div>
+      <div class="item p-2 bg-gray-100 rounded">Membuat Website Responsif</div>
+      <div class="item p-2 bg-gray-100 rounded">Tips SEO Website</div>
+    </div>
+
+  </div>
+
 </body>
+</html>
+
+
+</body>
+
 </html>
